@@ -2,6 +2,7 @@ import json
 import re
 import time
 import requests
+import os
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -16,7 +17,7 @@ from prompts import (
 )
 
 
-MISTRAL_API_KEY = "jXOD1ZX2TXyI9qGJtyXeEQ9k5s3YhL6I"
+MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
 MODEL = "mistral-large-latest"
 
